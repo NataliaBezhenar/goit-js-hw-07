@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const ulEl = document.getElementById('gallery');
+
+
+images.forEach(elem => {
+  ulEl.insertAdjacentHTML('afterbegin', `<li class="list-item-task-03"> <img class="img-task-03" src="${elem.url}" alt="${elem.alt}"/> </li>`)
+})
+
+ulEl.classList.add('nav-task-03')
