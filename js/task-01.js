@@ -1,9 +1,10 @@
 
 const selectedById = document.querySelector('#categories');
-const categoriesChildren = selectedById.children
+const categoriesChildren = document.querySelectorAll('#categories .item')
 console.log('В списке', categoriesChildren.length, 'категории.')
 
-for (const el of categoriesChildren){
-  console.log('Категория:', el.querySelector('h2').textContent)
-  console.log('Количество элементов:', el.querySelector('ul').children.length)
-}
+
+categoriesChildren.forEach(element => {
+  console.log('Категория:', element.querySelector('h2').textContent);
+  console.log('Количество элементов:', element.querySelector('ul').children.length);
+});

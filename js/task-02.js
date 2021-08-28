@@ -9,9 +9,10 @@ const ingredients = [
 
 const ulEl = document.getElementById('ingredients');
 
+const listItems = ingredients.map(element => {
+  const liEl = document.createElement("li");
+  liEl.appendChild(document.createTextNode(element));
+  return liEl;
+});
 
-  for (const el of ingredients) {
-    const liEl = document.createElement("li");
-    liEl.appendChild(document.createTextNode(el));
-    ulEl.appendChild(liEl);
-  }
+ulEl.append(...listItems);
