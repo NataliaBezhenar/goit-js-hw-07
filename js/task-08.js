@@ -2,9 +2,9 @@ const boxesContainer = document.getElementById("boxes");
 const input = document.querySelector("#controls input");
 const buttons = document.querySelectorAll("#controls button");
 let inputValue = 0;
+let side = 30;
 
 function createBoxes(amount) {
-  let side = 30;
   for (let i=0; i<amount; i++) {
     const div = document.createElement("div");
     div.style.width = side + "px";
@@ -19,6 +19,7 @@ function createBoxes(amount) {
 function destroyBoxes() {
   boxesContainer.innerHTML = "";
   input.value = "";
+  side = 30;
 }
 
 
